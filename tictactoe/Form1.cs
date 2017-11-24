@@ -262,7 +262,7 @@ namespace tictactoe
 
         public uint Size => size;
 
-        public int[,] State { get => state; }
+        public int[,] State { get { return state;} }
 
         public Tictactoe(int[,] state)
         {
@@ -379,7 +379,7 @@ namespace tictactoe
     class AIPlayer : TictactoePlayer
     {
         private Mark mark;
-        public Mark Mark { get => mark; set => mark = value; }
+        public Mark Mark { get { return mark; } set { mark = value;} }
         private Image nextFace;
         private string nextSerif;
         public AIPlayer(Mark mark)
@@ -620,7 +620,7 @@ namespace tictactoe
             this.willPut = null;
         }
 
-        public Mark Mark { get => mark; set => mark = value; }
+        public Mark Mark { get { return mark; } set { mark = value; } }
 
         public Point Action(Tictactoe game)
         {
