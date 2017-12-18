@@ -260,7 +260,7 @@ namespace tictactoe
         private readonly uint size;
         private int turn;
 
-        public uint Size => size;
+        public uint Size { get { return size; }}
 
         public int[,] State { get { return state;} }
 
